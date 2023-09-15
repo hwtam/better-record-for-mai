@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         better record for maimai net
-// @version      3.0
+// @version      3.1
 // @description  just add css rules using js (support mai tool
 // @author       tomtom
 // @match        https://maimaidx-eng.com/maimai-mobile/record/
@@ -21,36 +21,41 @@
   display: none !important;
 }
 
-.playRecordContainer {
-  width: 500px !important;
-  margin: auto !important;
-}
-
-.main_wrapper {
-  width: 960px !important;
-}
-
 img.title {
-  width: auto !important;
   cursor: pointer !important;
 }
 
-.main_wrapper header + div {
- text-align: center !important;
-}
+@media screen and (min-width: 960px) {
+    .playRecordContainer {
+      width: 500px !important;
+      margin: auto !important;
+    }
 
-svg[style="height:10px"] {
-  width: 100% !important;
-}
+    .main_wrapper {
+      width: 960px !important;
+    }
 
-div[class="p_10 t_l f_0 v_b"] {
-  float: left !important;
-  width: 480px !important;
-}
+    .main_wrapper header + div {
+     text-align: center !important;
+    }
 
-header[class="f_0"] {
-  width: 480px !important;
-  margin: auto !important;
+    svg[style="height:10px"] {
+      width: 100% !important;
+    }
+
+    div[class="p_10 t_l f_0 v_b"] {
+      float: left !important;
+      width: 480px !important;
+    }
+
+    header[class="f_0"] {
+      width: 480px !important;
+      margin: auto !important;
+    }
+
+    img.title {
+      width: auto !important;
+    }
 }
 `;
 
