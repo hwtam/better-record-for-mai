@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         better record for maimai net
-// @version      3.1
+// @name         better-record-for-maimai-net
+// @version      3.2
 // @description  just add css rules using js (support mai tool
 // @author       tomtom
 // @match        https://maimaidx-eng.com/maimai-mobile/record/
