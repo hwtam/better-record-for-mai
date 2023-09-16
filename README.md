@@ -18,3 +18,4 @@
 - [Custom names for friends on maimai DX net](https://github.com/evnchn/what-is-mai-name)
 - [Generates a chart and exports the chart data of mai-tools Rating Analyzer](https://github.com/evnchn/mai-chart-chart)
 - [Image loading speedup](https://github.com/evnchn/mai-speed)
+- [Search a maimai song on youtube using a button](https://github.com/hwtam/mai-search)
