@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         better-record-for-maimai-net
-// @version      3.2
+// @version      3.3
 // @description  just add css rules using js (support mai tool
 // @author       tomtom
 // @match        https://maimaidx-eng.com/maimai-mobile/record/
@@ -18,7 +18,7 @@
 
     var str = `
 #recordSummary {
-  display: none !important;
+  display: none;
 }
 
 img.title {
@@ -63,10 +63,19 @@ img.title {
     styleElement.appendChild(cssRules);
     document.head.appendChild(styleElement);
 
-    document.querySelector('img.title').addEventListener("click", () => {
-        cssRules = document.createTextNode("#recordSummary { display: block !important; } img.title { cursor: default !important; }");
-        styleElement.appendChild(cssRules);
-        document.head.appendChild(styleElement);
-    });
+    document.querySelector('img.title').addEventListener("click", changeRec);
+    var img = document.querySelector('div.m_t_5.m_b_10.t_l.f_0').lastElementChild;
+    img.style.cursor = "pointer";
+    img.addEventListener("click", changeRec);
+
+    function changeRec() {
+        var rec = document.querySelector("#recordSummary");
+        if (rec.style.display == "block") {
+            rec.style.display = "none";
+        }
+        else {
+            rec.style.display = "block";
+        }
+    }
 
 })();
